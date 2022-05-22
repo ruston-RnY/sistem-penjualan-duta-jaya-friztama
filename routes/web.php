@@ -29,5 +29,6 @@ Route::post('/suppliers/sorting', [SupplierController::class,'sorting'])->name('
 
 Route::resource('customers', '\App\Http\Controllers\CustomerController');
 Route::resource('transactions', '\App\Http\Controllers\TransactionController');
+Route::resource('users', '\App\Http\Controllers\UserController');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

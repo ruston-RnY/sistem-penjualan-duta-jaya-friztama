@@ -102,5 +102,27 @@
                 </div>
             </div>
         </div>
+
+        <div class="menu myaccordion" id="accordion">
+            <div id="headingFive" class="collapsed btn-collapse" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <div class="sidebar_link {{ Request::is('users*') ? 'active_menu_link' : '' }}"> 
+                    <i class="fa fa-calendar-check"></i>
+                    <a href="#">User</a>
+                    <span class="float-right">
+                        <i class="fas fa-angle-down" style="font-size: 16px"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="child-menu collapse" id="collapseFive" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <div class="sidebar_link">
+                    <i class="fa fa-building"></i>
+                    <a href="{{ route('users.index') }}">Data Master</a>
+                </div>
+                <div class="sidebar_link">
+                    <i class="fas fa-plus"></i>
+                    <a href="{{ route('users.create') }}">Tambah Data</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

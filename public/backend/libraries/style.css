@@ -209,11 +209,9 @@ body #container #sidebar .sidebar_menu .sidebar_link > a {
     font-weight: 700;
 }
 
-body #container #sidebar .sidebar_menu .sidebar_link .isActive {
-    color: #a5aaad;
-    font-weight: 700;
-    border-bottom: 2px solid #cc3d38;
-    padding: 5px 0;
+body #container #sidebar .sidebar_menu .sidebar_link:hover {
+    background: rgba(62, 161, 117, 0.3);
+    color: #3ea175;
 }
 
 body #container #sidebar .sidebar_menu .sidebar_link > i {

@@ -24,19 +24,19 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="name">Nama</label>
-                                    <input type="text" name="nama" placeholder="Nama Supplier" class="form-control">
+                                    <input type="text" name="nama" placeholder="Nama Supplier" class="form-control" value="{{ old('nama') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Email</label>
-                                    <input type="email" name="email" placeholder="contoh email@domain.com" class="form-control">
+                                    <input type="email" name="email" placeholder="contoh email@domain.com" class="form-control" value="{{ old('email') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Alamat</label>
-                                    <input type="text" name="alamat" placeholder="Alamat" class="form-control">
+                                    <input type="text" name="alamat" placeholder="Alamat" class="form-control" value="{{ old('alamat') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Telpon</label>
-                                    <input type="text" name="telpon" placeholder="Telpon" class="form-control">
+                                    <input type="text" name="telpon" placeholder="Telpon" class="form-control" value="{{ old('telpon') }}">
                                 </div>
                                 <a href="{{ route('suppliers.index') }}" class="btn btn-secondary btn-sm mt-4">Kembali</a>
                                 <button type="submit" class="btn btn-primary btn-sm mt-4">Simpan</button>

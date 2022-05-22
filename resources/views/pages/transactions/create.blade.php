@@ -33,15 +33,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Nama Pembeli</label>
-                                    <input type="text" name="nama_pembeli" placeholder="Nama pembeli" class="form-control">
+                                    <input type="text" name="nama_pembeli" placeholder="Nama pembeli" class="form-control" value="{{ old('nama_pembeli') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Alamat</label>
-                                    <input type="text" name="alamat" placeholder="Alamat" class="form-control">
+                                    <input type="text" name="alamat" placeholder="Alamat" class="form-control" value="{{ old('alamat') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Telpon</label>
-                                    <input type="text" name="telpon" placeholder="Telpon" class="form-control">
+                                    <input type="text" name="telpon" placeholder="Telpon" class="form-control" value="{{ old('telpon') }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Tanda Pengenal (Sim/Ktp/Npwp)</label>
@@ -49,11 +49,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Tanggal Transaksi</label>
-                                    <input type="date" name="tanggal_transaksi" placeholder="Tanggal Transaksi" class="form-control">
+                                    <input type="date" name="tanggal_transaksi" placeholder="Tanggal Transaksi" class="form-control" value="{{ old('tanggal_transaksi') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Total Terjual</label>
-                                    <input type="number" name="total_transaksi" placeholder="Total Produk Terjual" class="form-control">
+                                    <input type="number" name="total_transaksi" placeholder="Total Produk Terjual" class="form-control" value="{{ old('total_transaksi') }}">
                                 </div>
                                 <a href="{{ route('transactions.index') }}" class="btn btn-secondary btn-sm mt-4">Kembali</a>
                                 <button type="submit" class="btn btn-primary btn-sm mt-4">Simpan</button>

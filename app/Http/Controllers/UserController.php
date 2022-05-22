@@ -47,7 +47,7 @@ class UserController extends Controller
 
         User::create($validatedData);
 
-        return redirect()->route('pages.users.index');
+        return redirect()->route('users.index');
     }
 
     /**
@@ -69,7 +69,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('pages.users.edit', compact('user'));
     }
 
     /**
@@ -81,7 +82,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255|min:5',
+            'email' => 'required|email',
+            'role' => 'required',
+        ]);
+
+        $data = $request->all();
+        $user = User::findOrFail($id);
+
+        $user->update($data);
+        return redirect()->route('users.index');
     }
 
     /**
@@ -92,6 +103,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect()->route('users.index');
     }
 }

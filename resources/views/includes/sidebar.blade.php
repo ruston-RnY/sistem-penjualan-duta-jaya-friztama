@@ -1,7 +1,7 @@
 <div id="sidebar">
     <div class="sidebar_title">
         <div class="sidebar_img">
-            <img src="{{ url('backend/assets/phone1.jpg') }}" alt="">
+            <img src="{{ url('backend/assets/profil.jpg') }}" alt="">
             <h1>PT. Duta Jaya Friztama</h1>
         </div>
         <i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar"></i>
@@ -124,6 +124,15 @@
                 </div>
             </div>
         </div>
+
+        {{-- @if (auth()->user()->role == 'ADMIN')
+          <p>admin</p>  
+        @elseif(auth()->user()->role == 'MANAGER')
+        <p>aku manager</p>  
+        @elseif(auth()->user()->role == 'DIREKTUR')
+        <p>aku direktur</p>  
+        @endif --}}
+
     </div>
 
     <div class="sidebar-footer mt-auto">

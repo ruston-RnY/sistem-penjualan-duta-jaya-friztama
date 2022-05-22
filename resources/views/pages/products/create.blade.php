@@ -24,19 +24,19 @@
                                 @csrf
                                 <div class="form-group">
                                     <label>Nama</label>
-                                    <input type="text" name="nama" placeholder="Nama Produk" class="form-control">
+                                    <input type="text" name="nama" placeholder="Nama Produk" class="form-control" value="{{ old('nama') }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Harga Beli</label>
-                                    <input type="number" name="harga_beli" placeholder="Harga Beli" class="form-control">
+                                    <input type="number" name="harga_beli" placeholder="Harga Beli" class="form-control" value="{{ old('harga_beli') }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Harga Jual</label>
-                                    <input type="number" name="harga_jual" placeholder="Harga Jual" class="form-control">
+                                    <input type="number" name="harga_jual" placeholder="Harga Jual" class="form-control" value="{{ old('harga_jual') }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Stok</label>
-                                    <input type="number" name="stok" placeholder="Stok" class="form-control">
+                                    <input type="number" name="stok" placeholder="Stok" class="form-control" value="{{ old('stok') }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Supplier</label>

@@ -82,6 +82,10 @@ body #container .navbar .nav_icon > i {
     color: #a5aaad;
 }
 
+body #container .navbar .navbar_left {
+    width: 60%;
+}
+
 body #container .navbar .navbar_left > a {
     margin-right: 30px;
     text-decoration: none;
@@ -111,6 +115,11 @@ body #container .navbar .navbar_right {
 body #container .navbar .navbar_right > a {
     margin-left: 20px;
     text-decoration: none;
+}
+
+body #container .navbar .navbar_right .btn-logout {
+    font-size: 14px;
+    padding: 5px 10px;
 }
 
 body #container .navbar .navbar_right > a > i {

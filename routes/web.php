@@ -16,19 +16,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('loginUser');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/', [DashboardController::class,'index'])->name('dashboard');
-
-Route::resource('products', '\App\Http\Controllers\ProductController');
-Route::get('/search-product', [ProductController::class,'search'])->name('search-product');
-Route::post('/products/sorting', [ProductController::class,'sorting'])->name('sorting-products');
-
-Route::resource('suppliers', '\App\Http\Controllers\SupplierController');
-Route::get('/search-supplier', [SupplierController::class,'search'])->name('search-supplier');
-Route::post('/suppliers/sorting', [SupplierController::class,'sorting'])->name('sorting-suppliers');
-
-Route::resource('customers', '\App\Http\Controllers\CustomerController');
-Route::resource('transactions', '\App\Http\Controllers\TransactionController');
-Route::resource('users', '\App\Http\Controllers\UserController');
-
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::middleware('auth')->group(function(){
+    Route::get('/', [DashboardController::class,'index'])->name('dashboard');
+    
+    Route::resource('products', '\App\Http\Controllers\ProductController');
+    Route::get('/search-product', [ProductController::class,'search'])->name('search-product');
+    Route::post('/products/sorting', [ProductController::class,'sorting'])->name('sorting-products');
+    
+    Route::resource('suppliers', '\App\Http\Controllers\SupplierController');
+    Route::get('/search-supplier', [SupplierController::class,'search'])->name('search-supplier');
+    Route::post('/suppliers/sorting', [SupplierController::class,'sorting'])->name('sorting-suppliers');
+    
+    Route::resource('customers', '\App\Http\Controllers\CustomerController');
+    Route::resource('transactions', '\App\Http\Controllers\TransactionController');
+    Route::resource('users', '\App\Http\Controllers\UserController');
+});

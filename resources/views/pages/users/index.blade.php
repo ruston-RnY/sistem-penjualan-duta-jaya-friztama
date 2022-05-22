@@ -57,16 +57,17 @@
                                     <th>Nama</th>
                                     <th>Email</th>
                                     <th>Role</th>
+                                    <th>Tanggal di Daftarkan</th>
                                     <th>Action</th>
                                 </thead>
                                 <tbody>
                                     @forelse ($users as $no => $data)
                                         <tr>
                                             <td>{{ $no + $users->firstItem() }}.</td>
-                                            <td>{{ $data->nama }}</td>
+                                            <td>{{ $data->name }}</td>
                                             <td>{{ $data->email }}</td>
-                                            <td>{{ $data->telpon }}</td>
-                                            <td>{{ $data->alamat }}</td>
+                                            <td>{{ $data->role }}</td>
+                                            <td>{{ \Carbon\Carbon::create($data->created_at)->translatedFormat('l, d F Y') }}</td>
                                             <td>
                                                 <a href="{{ route('users.edit', $data->id) }}" class="btn btn-primary btn-sm">
                                                     <i class="fa fa-pencil-alt"></i>

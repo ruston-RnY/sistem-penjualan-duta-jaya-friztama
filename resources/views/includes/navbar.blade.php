@@ -6,9 +6,16 @@
         <span class="text-animate font-bold text-muted"></span>
     </div>
     <div class="navbar_right">
-        <span>Noviyana</span>
-        <a href="">
-            <img src="{{ url('backend/assets/phone1.jpg') }}" width="30" style="border-radius: 50%">
-        </a>
+        @auth
+            <span>{{ auth()->user()->name }}</span>
+            <form action="/logout" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger btn-logout ml-3">
+                  Logout
+                </button>
+            </form>
+        @else
+            <span>Toni</span>
+        @endauth
     </div>
 </nav>

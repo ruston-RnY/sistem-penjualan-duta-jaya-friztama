@@ -151,6 +151,8 @@ body #container #sidebar {
     padding: 20px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
 }
 
 body #container #sidebar .sidebar_title {
@@ -211,6 +213,7 @@ body #container #sidebar .sidebar_menu .sidebar_link {
     padding: 10px;
     border-radius: 3px;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
 body #container #sidebar .sidebar_menu .sidebar_link > a {

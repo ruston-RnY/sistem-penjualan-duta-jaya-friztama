@@ -20,7 +20,7 @@
 <script>
     var typed = new Typed(".text-animate ", {
         strings: [
-            "Selamat Datang Admin", "Di sistem pengelolaan data PT. Duta Jaya Friztama"
+            "Selamat Datang", "Di sistem pengelolaan data PT. Duta Jaya Friztama"
         ],
         typeSpeed: 100,
         backSpeed: 100,

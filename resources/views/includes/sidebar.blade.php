@@ -9,7 +9,7 @@
 
     <div class="sidebar_menu">
         <div class="menu">
-            <div class="sidebar_link">
+            <div class="sidebar_link {{ Request::is('/') ? 'active_menu_link' : '' }}">
                 <i class="fa fa-home"></i>
                 <a href="{{ route('dashboard') }}">Dashboard</a> 
             </div>
@@ -18,7 +18,7 @@
         <div class="menu myaccordion" id="accordion">
             <div id="headingOne" class="collapsed btn-collapse" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 <div class="sidebar_link  {{ Request::is('products*') ? 'active_menu_link' : '' }}" > 
-                    <i class="fa fa-calendar-check"></i>
+                    <i class="fa fa-university"></i>
                     <a href="#">Produk</a>
                     <span class="float-right">
                         <i class="fas fa-angle-down" style="font-size: 16px"></i>
@@ -40,7 +40,7 @@
         <div class="menu myaccordion" id="accordion">
             <div id="headingTwo" class="collapsed btn-collapse" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 <div class="sidebar_link {{ Request::is('suppliers*') ? 'active_menu_link' : '' }}" > 
-                    <i class="fa fa-calendar-check"></i>
+                    <i class="fa fa-address-card" aria-hidden="true"></i>
                     <a href="#">Supplier</a>
                     <span class="float-right">
                         <i class="fas fa-angle-down" style="font-size: 16px"></i>
@@ -62,7 +62,7 @@
         <div class="menu myaccordion" id="accordion">
             <div id="headingThree" class="collapsed btn-collapse" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 <div class="sidebar_link {{ Request::is('customers*') ? 'active_menu_link' : '' }}"> 
-                    <i class="fa fa-calendar-check"></i>
+                    <i class="fa fa-users" aria-hidden="true"></i>
                     <a href="#">Pelanggan</a>
                     <span class="float-right">
                         <i class="fas fa-angle-down" style="font-size: 16px"></i>
@@ -84,7 +84,7 @@
         <div class="menu myaccordion" id="accordion">
             <div id="headingFour" class="collapsed btn-collapse" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 <div class="sidebar_link {{ Request::is('transactions*') ? 'active_menu_link' : '' }}"> 
-                    <i class="fa fa-calendar-check"></i>
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
                     <a href="#">Transaksi</a>
                     <span class="float-right">
                         <i class="fas fa-angle-down" style="font-size: 16px"></i>
@@ -106,7 +106,7 @@
         <div class="menu myaccordion" id="accordion">
             <div id="headingFive" class="collapsed btn-collapse" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 <div class="sidebar_link {{ Request::is('users*') ? 'active_menu_link' : '' }}"> 
-                    <i class="fa fa-calendar-check"></i>
+                    <i class="fa fa-user" aria-hidden="true"></i>
                     <a href="#">User</a>
                     <span class="float-right">
                         <i class="fas fa-angle-down" style="font-size: 16px"></i>
@@ -124,5 +124,9 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="sidebar-footer mt-auto">
+        <span style="color: #a5aaad; font-size: 14px">&copy; PT. Duta Jaya Friztama - 2022</span>
     </div>
 </div>

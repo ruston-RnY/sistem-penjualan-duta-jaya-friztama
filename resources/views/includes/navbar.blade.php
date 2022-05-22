@@ -7,7 +7,7 @@
     </div>
     <div class="navbar_right">
         @auth
-            <span>{{ auth()->user()->name }}</span>
+            <span class="text-capitalize">{{ auth()->user()->name }}</span>
             <form action="/logout" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-danger btn-logout ml-3">

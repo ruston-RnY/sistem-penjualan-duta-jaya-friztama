@@ -69,9 +69,6 @@
                                             <td>{{ $data->role }}</td>
                                             <td>{{ \Carbon\Carbon::create($data->created_at)->translatedFormat('l, d F Y') }}</td>
                                             <td>
-                                                <a href="{{ route('users.edit', $data->id) }}" class="btn btn-primary btn-sm">
-                                                    <i class="fa fa-pencil-alt"></i>
-                                                </a>
                                                 <form action="{{ route('users.destroy', $data->id) }}" method="POST" class="d-inline">
                                                     @method('DELETE')
                                                     @csrf

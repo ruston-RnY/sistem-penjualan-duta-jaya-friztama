@@ -83,6 +83,7 @@ class SupplierController extends Controller
     {
         $request->validate([
             'nama' => 'required|min:5',
+            'email' => 'required|email',
             'alamat' => 'required|min:15',
             'telpon' => 'required|min:5'
         ]);

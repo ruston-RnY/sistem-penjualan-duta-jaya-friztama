@@ -25,3 +25,6 @@ Route::post('/products/sorting', [ProductController::class,'sorting'])->name('so
 Route::resource('suppliers', '\App\Http\Controllers\SupplierController');
 Route::get('/search-supplier', [SupplierController::class,'search'])->name('search-supplier');
 Route::post('/suppliers/sorting', [SupplierController::class,'sorting'])->name('sorting-suppliers');
+
+Route::resource('customers', '\App\Http\Controllers\CustomerController');
+Route::resource('transactions', '\App\Http\Controllers\TransactionController');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -13,7 +14,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        $customers = Customer::orderBy('id', 'desc')->paginate(5);
+        return view('pages.customers.index', compact('customers'));
     }
 
     /**
@@ -23,7 +25,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.customers.create');
     }
 
     /**
@@ -34,7 +36,17 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required|min:5',
+            'email' => 'required|email',
+            'alamat' => 'required|min:15',
+            'telpon' => 'required|min:5'
+        ]);
+
+        $data = $request->all();
+        Customer::create($data);
+
+        return redirect()->route('customers.index');
     }
 
     /**
@@ -56,7 +68,8 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $customer = Customer::findOrFail($id);
+        return view('pages.customers.edit', compact('customer'));
     }
 
     /**
@@ -68,7 +81,18 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nama' => 'required|min:5',
+            'email' => 'required|email',
+            'alamat' => 'required|min:15',
+            'telpon' => 'required|min:5'
+        ]);
+
+        $data = $request->all();
+        $customer = Customer::findOrFail($id);
+
+        $customer->update($data);
+        return redirect()->route('customers.index');
     }
 
     /**
@@ -79,6 +103,9 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Customer::findOrFail($id);
+        $data->delete();
+
+        return redirect()->route('customers.index');
     }
 }

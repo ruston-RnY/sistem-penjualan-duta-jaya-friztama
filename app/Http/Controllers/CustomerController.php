@@ -108,4 +108,10 @@ class CustomerController extends Controller
 
         return redirect()->route('customers.index');
     }
+
+    public function print()
+    {
+        $customers = Customer::orderBy('id', 'desc')->get();
+        return view('pages.customers.laporan', compact('customers'));
+    }
 }

@@ -19,42 +19,15 @@
                                     <a href="{{ route('customers.create') }}" class="btn btn-primary btn-sm">
                                         Tambah
                                     </a>
+                                    <a href="{{ route('print-customers') }}" target="_blank" class="btn btn-info btn-sm ml-2"><i class="fa fa-print"></i> Print</a>
                                 </div>
-                                {{-- <div class="col-8 d-flex justify-content-between">
-                                    <form action="{{ route('sorting-products') }}" method="post" class="form-inline my-2 my-lg-0">
-                                        @csrf
-                                        <div class="form-group">
-                                            <select name="sortby" class="form-control">
-                                                <option value="">Urutkan</option>
-                                                <option value="terendah">Harga Terendah</option>
-                                                <option value="tertinggi">Harga Tertinggi</option>
-                                            </select>
-                                        </div>
-                                        <button class="ml-2 btn btn-success btn-sm" type="submit">Submit</button>
-                                    </form>
-                                    <form action="{{ route('search-product') }}" method="GET" class="form-inline my-2 my-lg-0 justify-content-end">
-                                        @csrf
-                                        <input class="form-control mr-sm-2" type="search" placeholder="Masukkan Nama Produk..." aria-label="Search" name="search" size="30">
-                                        <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-                                    </form>
-                                </div> --}}
                             </div>
-                            {{-- <div class="row">
-                                <div class="col">
-                                    @isset($sort)
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="pt-3 m-0 text-muted">Hasil Filter <span class="font-italic">" Harga {{ $sort['sortby'] }} "</span></p>
-                                        <a href="{{ route('products.index') }}" class="ml-3 btn-warning btn btn-sm text-white mt-3">Hapus Filter</a>
-                                        </div>
-                                    @endisset
-                                </div>
-                            </div> --}}
                         </div>
                         <div class="card-body">
                             <table class="table table-sm">
                                 <thead>
                                     <th>#</th>
-                                    <th>Nama Customer</th>
+                                    <th>Nama Pelanggan</th>
                                     <th>Email</th>
                                     <th>Telpon</th>
                                     <th>Alamat</th>

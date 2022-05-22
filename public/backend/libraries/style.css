@@ -199,6 +199,26 @@ body #container #sidebar .sidebar_title > i {
     display: none;
 }
 
+body #container #sidebar .sidebar_menu {
+    height: 70vh;
+    overflow: auto;
+}
+
+body #container #sidebar .sidebar_menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+body #container #sidebar .sidebar_menu::-webkit-scrollbar-track {
+    background: rgba(231, 231, 231, 0.63);
+}
+
+/* Handle */
+body #container #sidebar .sidebar_menu::-webkit-scrollbar-thumb {
+    background: #494949;
+    border-radius: 4px;
+}
+
 body #container #sidebar .sidebar_menu > h2 {
     color: #3ea175;
     font-size: 16px;
@@ -229,7 +249,7 @@ body #container #sidebar .sidebar_menu .sidebar_link:hover {
 
 body #container #sidebar .sidebar_menu .sidebar_link > i {
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 body #container #sidebar .sidebar_menu .active_menu_link {

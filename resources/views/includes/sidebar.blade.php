@@ -125,6 +125,24 @@
             </div>
         </div>
 
+        <div class="menu myaccordion" id="accordion">
+            <div id="headingSix" class="collapsed btn-collapse" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <div class="sidebar_link"> 
+                    <i class="fa fa-book"></i>
+                    <a href="#">Laporan</a>
+                    <span class="float-right">
+                        <i class="fas fa-angle-down" style="font-size: 16px"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="child-menu collapse" id="collapseSix" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <div class="sidebar_link">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <a href="{{ route('users.index') }}">Penjualan</a>
+                </div>
+            </div>
+        </div>
+
         {{-- @if (auth()->user()->role == 'ADMIN')
           <p>admin</p>  
         @elseif(auth()->user()->role == 'MANAGER')

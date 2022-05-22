@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
@@ -25,13 +26,17 @@ Route::middleware('auth')->group(function(){
     
     Route::resource('products', '\App\Http\Controllers\ProductController');
     Route::get('/search-product', [ProductController::class,'search'])->name('search-product');
+    Route::get('/print-products', [ProductController::class,'print'])->name('print-products');
     Route::post('/products/sorting', [ProductController::class,'sorting'])->name('sorting-products');
     
     Route::resource('suppliers', '\App\Http\Controllers\SupplierController');
     Route::get('/search-supplier', [SupplierController::class,'search'])->name('search-supplier');
+    Route::get('/print-suppliers', [SupplierController::class,'print'])->name('print-suppliers');
     Route::post('/suppliers/sorting', [SupplierController::class,'sorting'])->name('sorting-suppliers');
     
     Route::resource('customers', '\App\Http\Controllers\CustomerController');
+    Route::get('/print-customers', [CustomerController::class,'print'])->name('print-customers');
+
     Route::resource('transactions', '\App\Http\Controllers\TransactionController');
     Route::resource('users', '\App\Http\Controllers\UserController');
 });

@@ -148,4 +148,10 @@ class ProductController extends Controller
 
         return view('pages.products.index', compact('products', 'sort'));
     }
+
+    public function print()
+    {
+        $products = Product::with('supplier')->get();
+        return view('pages.products.laporan', compact('products'));
+    }
 }

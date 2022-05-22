@@ -130,4 +130,10 @@ class SupplierController extends Controller
 
         return view('pages.suppliers.index', compact('suppliers', 'sort'));
     }
+
+    public function print()
+    {
+        $suppliers = Supplier::orderBy('id', 'desc')->get();
+        return view('pages.suppliers.laporan', compact('suppliers'));
+    }
 }

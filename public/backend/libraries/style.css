@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -270,6 +271,58 @@ body #container.container_responsive {
 
 .myaccordion .btn-collapse {
     cursor: pointer;
+}
+
+.login {
+    height: 100vh;
+    /* background: #664af9; */
+    /* background-image: url(../assets/building.jpg); */
+    background: linear-gradient(rgb(58 58 58 / 70%), rgb(12 12 10 / 70%)),
+        url(../assets/building.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login .login-content .card {
+    background: #00000038;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    margin-top: 20vh;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    color: #fff;
+}
+
+.login .login-content .card .card-body {
+    padding: 30px;
+}
+
+.login .login-content .card .card-body form {
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+.login .login-content .card .card-body .form-control {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 200;
+    border: 1px solid #a7a7a7;
+}
+
+.login .login-content .card .card-body a {
+    font-size: 0.9rem;
+}
+
+.login .login-content .btn-log {
+    background: #1f228f;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.login .login-content .btn-log:hover {
+    /* color: #152c5b; */
+    background: none;
+    border: 1px solid #a7a7a7;
 }
 
 /*# sourceMappingURL=style.css.map */

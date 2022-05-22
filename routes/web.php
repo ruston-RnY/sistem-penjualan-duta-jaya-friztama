@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
@@ -28,3 +29,5 @@ Route::post('/suppliers/sorting', [SupplierController::class,'sorting'])->name('
 
 Route::resource('customers', '\App\Http\Controllers\CustomerController');
 Route::resource('transactions', '\App\Http\Controllers\TransactionController');
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');

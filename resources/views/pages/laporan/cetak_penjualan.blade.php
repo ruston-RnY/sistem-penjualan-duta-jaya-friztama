@@ -49,8 +49,8 @@
                                     </tr>
                                 @endforelse
                                 <tr>
-                                    <td colspan="5" class="text-center">Total</td>
-                                    {{-- <td>{{ sum($data->total_harga) }}</td> --}}
+                                    <td colspan="5" class="text-center" style="font-weight: 500">Total</td>
+                                    <td style="font-weight: 500">Rp. {{ number_format($transactions->sum('total_harga')) }}</td>
                                 </tr>
                             </tbody>
                         </table>

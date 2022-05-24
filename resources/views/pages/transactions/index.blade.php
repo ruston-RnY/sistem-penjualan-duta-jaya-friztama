@@ -19,6 +19,7 @@
                                     <a href="{{ route('transactions.create') }}" class="btn btn-primary btn-sm">
                                         Tambah
                                     </a>
+                                    <a href="{{ route('print-transactions') }}" target="_blank" class="btn btn-info btn-sm ml-2"><i class="fa fa-print"></i> Print</a>
                                 </div>
                                 {{-- <div class="col-7 d-flex justify-content-between">
                                     <form action="{{ route('sorting-transactions') }}" method="post" class="form-inline my-2 my-lg-0">

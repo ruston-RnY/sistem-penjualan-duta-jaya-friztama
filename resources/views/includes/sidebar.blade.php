@@ -2,9 +2,9 @@
     <div class="sidebar_title">
         <div class="sidebar_img">
             <img src="{{ url('backend/assets/profil.jpg') }}" alt="">
-            <h1>PT. Duta Jaya Friztama</h1>
+            {{-- <h1>PT. Duta Jaya Friztama</h1> --}}
+            <span class="ml-4 text-capitalize">{{ auth()->user()->name }}</span>
         </div>
-        <i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar"></i>
     </div>
 
     <div class="sidebar_menu">
@@ -138,7 +138,7 @@
             <div class="child-menu collapse" id="collapseSix" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                 <div class="sidebar_link">
                     <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                    <a href="{{ route('users.index') }}">Penjualan</a>
+                    <a href="{{ route('laporan.create') }}">Penjualan</a>
                 </div>
             </div>
         </div>
@@ -151,9 +151,5 @@
         <p>aku direktur</p>  
         @endif --}}
 
-    </div>
-
-    <div class="sidebar-footer mt-auto">
-        <span style="color: #a5aaad; font-size: 14px">&copy; PT. Duta Jaya Friztama - 2022</span>
     </div>
 </div>

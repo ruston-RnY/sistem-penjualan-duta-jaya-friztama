@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,7 +37,10 @@ Route::middleware('auth')->group(function(){
     
     Route::resource('customers', '\App\Http\Controllers\CustomerController');
     Route::get('/print-customers', [CustomerController::class,'print'])->name('print-customers');
-
+    
     Route::resource('transactions', '\App\Http\Controllers\TransactionController');
+    Route::get('/print-transactions', [TransactionController::class,'print'])->name('print-transactions');
+    
+    Route::resource('laporan', '\App\Http\Controllers\LaporanController');
     Route::resource('users', '\App\Http\Controllers\UserController');
 });

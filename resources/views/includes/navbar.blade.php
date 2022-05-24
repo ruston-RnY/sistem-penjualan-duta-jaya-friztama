@@ -7,15 +7,13 @@
     </div>
     <div class="navbar_right">
         @auth
-            <span class="text-capitalize">{{ auth()->user()->name }}</span>
+            <span style="color: #a5aaad; font-size: 14px">&copy; PT. Duta Jaya Friztama - 2022</span>
             <form action="/logout" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-danger btn-logout ml-3">
                   Logout
                 </button>
             </form>
-        @else
-            <span>Toni</span>
         @endauth
     </div>
 </nav>

@@ -138,4 +138,10 @@ class TransactionController extends Controller
 
         return view('pages.transactions.index', compact('transactions', 'sort'));
     }
+
+    public function print()
+    {
+        $transactions = Transaction::orderBy('id', 'desc')->get();
+        return view('pages.transactions.laporan', compact('transactions'));
+    }
 }

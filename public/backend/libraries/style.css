@@ -239,7 +239,7 @@ body #container #sidebar .sidebar_menu .sidebar_link {
 body #container #sidebar .sidebar_menu .sidebar_link > a {
     text-decoration: none;
     color: #a5aaad;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 body #container #sidebar .sidebar_menu .sidebar_link:hover {

@@ -3,7 +3,10 @@
         <div class="sidebar_img">
             <img src="{{ url('backend/assets/profil.jpg') }}" alt="">
             {{-- <h1>PT. Duta Jaya Friztama</h1> --}}
-            <span class="ml-4 text-capitalize">{{ auth()->user()->name }}</span>
+            <div>
+                <span class="ml-4 text-capitalize">{{ auth()->user()->name }}</span>
+                <span class="ml-4">{{ auth()->user()->role }}</span>
+            </div>
         </div>
     </div>
 
@@ -27,12 +30,9 @@
             </div>
             <div class="child-menu collapse" id="collapseOne" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 <div class="sidebar_link">
+                    {{-- <i class="fa fa-table" aria-hidden="true"></i> --}}
                     <i class="fa fa-building"></i>
                     <a href="{{ route('products.index') }}">Data Master</a>
-                </div>
-                <div class="sidebar_link">
-                    <i class="fas fa-plus"></i>
-                    <a href="{{ route('products.create') }}">Tambah Data</a>
                 </div>
             </div>
         </div>
@@ -52,10 +52,6 @@
                     <i class="fa fa-building"></i>
                     <a href="{{ route('suppliers.index') }}">Data Master</a>
                 </div>
-                <div class="sidebar_link">
-                    <i class="fas fa-plus"></i>
-                    <a href="{{ route('suppliers.create') }}">Tambah Data</a>
-                </div>
             </div>
         </div>
 
@@ -74,10 +70,6 @@
                     <i class="fa fa-building"></i>
                     <a href="{{ route('customers.index') }}">Data Master</a>
                 </div>
-                <div class="sidebar_link">
-                    <i class="fas fa-plus"></i>
-                    <a href="{{ route('customers.create') }}">Tambah Data</a>
-                </div>
             </div>
         </div>
 
@@ -94,11 +86,7 @@
             <div class="child-menu collapse" id="collapseFour" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 <div class="sidebar_link">
                     <i class="fa fa-building"></i>
-                    <a href="{{ route('transactions.index') }}">Data Master</a>
-                </div>
-                <div class="sidebar_link">
-                    <i class="fas fa-plus"></i>
-                    <a href="{{ route('transactions.create') }}">Tambah Data</a>
+                    <a href="{{ route('transactions.index') }}">Data Penjualan</a>
                 </div>
             </div>
         </div>
@@ -117,10 +105,6 @@
                 <div class="sidebar_link">
                     <i class="fa fa-building"></i>
                     <a href="{{ route('users.index') }}">Data Master</a>
-                </div>
-                <div class="sidebar_link">
-                    <i class="fas fa-plus"></i>
-                    <a href="{{ route('users.create') }}">Tambah Data</a>
                 </div>
             </div>
         </div>

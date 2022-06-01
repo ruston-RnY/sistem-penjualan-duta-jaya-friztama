@@ -64,6 +64,11 @@ class TransactionController extends Controller
             'total_harga' => $request->total_transaksi * $productId->harga_jual,
         ]);
 
+        $productId->update([
+            'produk_id' => $request->product_id,
+            'stok' => $productId->stok - $request->total_transaksi
+        ]);
+
         return redirect()->route('transactions.index');
     }
 

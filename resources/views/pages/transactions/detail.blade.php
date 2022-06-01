@@ -30,6 +30,14 @@
                                         <td>{{ $detailTransaction->telpon }}</td>
                                     </tr>
                                     <tr>
+                                        <td>Tanda Pengenal</td>
+                                        <td>
+                                            <div style="height: 70px;">
+                                                <img src="{{ Storage::url($detailTransaction->tanda_pengenal) }}" alt="" class="img-thumbnail" style="object-fit: contain; height: 100%;">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td>Produk</td>
                                         <td>
                                             <table class="table table-bordered">

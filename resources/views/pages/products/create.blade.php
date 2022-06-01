@@ -22,34 +22,40 @@
                             @endif
                             <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="form-group">
-                                    <label>Nama</label>
-                                    <input type="text" name="nama" placeholder="Nama Produk" class="form-control" value="{{ old('nama') }}">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label>Nama</label>
+                                        <input type="text" name="nama" placeholder="Nama Produk" class="form-control" value="{{ old('nama') }}">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Harga Beli</label>
+                                        <input type="number" name="harga_beli" placeholder="Harga Beli" class="form-control" value="{{ old('harga_beli') }}">
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Harga Beli</label>
-                                    <input type="number" name="harga_beli" placeholder="Harga Beli" class="form-control" value="{{ old('harga_beli') }}">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label>Harga Jual</label>
+                                        <input type="number" name="harga_jual" placeholder="Harga Jual" class="form-control" value="{{ old('harga_jual') }}">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Stok</label>
+                                        <input type="number" name="stok" placeholder="Stok" class="form-control" value="{{ old('stok') }}">
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Harga Jual</label>
-                                    <input type="number" name="harga_jual" placeholder="Harga Jual" class="form-control" value="{{ old('harga_jual') }}">
-                                </div>
-                                <div class="form-group">
-                                    <label>Stok</label>
-                                    <input type="number" name="stok" placeholder="Stok" class="form-control" value="{{ old('stok') }}">
-                                </div>
-                                <div class="form-group">
-                                    <label>Supplier</label>
-                                    <select name="supplier_id" class="form-control" required>
-                                        <option value="">Pilih Supplier</option>
-                                        @foreach ($suppliers as $supplier)
-                                        <option value="{{ $supplier->id }}">{{ $supplier->nama }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>  
-                                <div class="form-group">
-                                    <label>Foto Produk</label>
-                                    <input type="file" name="foto" class="form-control">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label>Supplier</label>
+                                        <select name="supplier_id" class="form-control" required>
+                                            <option value="">Pilih Supplier</option>
+                                            @foreach ($suppliers as $supplier)
+                                            <option value="{{ $supplier->id }}">{{ $supplier->nama }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>  
+                                    <div class="form-group col-md-6">
+                                        <label>Foto Produk</label>
+                                        <input type="file" name="foto" class="form-control">
+                                    </div>
                                 </div>
                                 <a href="{{ route('products.index') }}" class="btn btn-secondary btn-sm mt-4">Kembali</a>
                                 <button type="submit" class="btn btn-primary btn-sm mt-4">Simpan</button>

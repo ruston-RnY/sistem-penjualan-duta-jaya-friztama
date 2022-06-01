@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\Product;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
@@ -27,7 +28,8 @@ class TransactionController extends Controller
     public function create()
     {
         $products = Product::all();
-        return view('pages.transactions.create', compact('products'));
+        $customers = Customer::all();
+        return view('pages.transactions.create', compact('products', 'customers'));
     }
 
     /**
@@ -40,7 +42,7 @@ class TransactionController extends Controller
     {
         $request->validate([
             'product_id' => 'required',
-            'nama_pembeli' => 'required|min:4',
+            'customer_id' => 'required',
             'alamat' => 'required|min:10',
             'telpon' => 'required|min:5',
             'tanda_pengenal' => 'required',
@@ -52,7 +54,7 @@ class TransactionController extends Controller
 
         Transaction::create([
             'produk_id' => $request->product_id,
-            'nama_pembeli' => $request->nama_pembeli,
+            'customer_id' => $request->customer_id,
             'alamat' => $request->alamat,
             'telpon' => $request->telpon,
             'tanda_pengenal' => $request->file('tanda_pengenal')->store(

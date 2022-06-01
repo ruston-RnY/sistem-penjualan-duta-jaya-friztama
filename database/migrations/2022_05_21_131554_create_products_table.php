@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('nama');
             $table->integer('harga_beli');
             $table->integer('harga_jual');
-            $table->integer('stok');
+            $table->integer('stok')->nullable();
             $table->string('foto');
             $table->softDeletes();
             $table->timestamps();

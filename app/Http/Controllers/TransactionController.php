@@ -50,6 +50,7 @@ class TransactionController extends Controller
             'total_transaksi' => 'required',
         ]);
 
+        // dd($request->all());
         $productId = Product::findOrFail($request->product_id);
 
         Transaction::create([

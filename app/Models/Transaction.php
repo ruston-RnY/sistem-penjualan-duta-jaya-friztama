@@ -12,7 +12,7 @@ class Transaction extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'produk_id', 'nama_pembeli', 'alamat', 'telpon', 'tanda_pengenal', 'tanggal_transaksi', 'total_transaksi', 'total_harga'
+        'produk_id', 'customer_id', 'alamat', 'telpon', 'tanda_pengenal', 'tanggal_transaksi', 'total_transaksi', 'total_harga'
     ];
 
     public function produk()

@@ -37,9 +37,9 @@ class SupplierController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required|min:5',
+            'nama' => 'required|min:4',
             'email' => 'required|email',
-            'alamat' => 'required|min:15',
+            'alamat' => 'required|min:10',
             'telpon' => 'required|min:5'
         ]);
 
@@ -82,9 +82,9 @@ class SupplierController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required|min:5',
+            'nama' => 'required|min:4',
             'email' => 'required|email',
-            'alamat' => 'required|min:15',
+            'alamat' => 'required|min:10',
             'telpon' => 'required|min:5'
         ]);
 

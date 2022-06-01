@@ -5,7 +5,7 @@
             {{-- <h1>PT. Duta Jaya Friztama</h1> --}}
             <div>
                 <span class="ml-4 text-capitalize">{{ auth()->user()->name }}</span>
-                <span class="ml-4">{{ auth()->user()->role }}</span>
+                <span class="ml-4 d-block">{{ auth()->user()->role }}</span>
             </div>
         </div>
     </div>

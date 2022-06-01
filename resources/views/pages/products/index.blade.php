@@ -15,29 +15,31 @@
                     <div class="card mt-3">
                         <div class="card-header">
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-3">
                                     <a href="{{ route('products.create') }}" class="btn btn-primary btn-sm">
                                         Tambah
                                     </a>
                                     <a href="{{ route('print-products') }}" target="_blank" class="btn btn-info btn-sm ml-2"><i class="fa fa-print"></i> Print</a>
                                 </div>
-                                <div class="col-8 d-flex justify-content-between">
-                                    <form action="{{ route('sorting-products') }}" method="post" class="form-inline my-2 my-lg-0">
-                                        @csrf
-                                        <div class="form-group">
-                                            <select name="sortby" class="form-control">
-                                                <option value="">Urutkan</option>
-                                                <option value="terendah">Harga Terendah</option>
-                                                <option value="tertinggi">Harga Tertinggi</option>
-                                            </select>
-                                        </div>
-                                        <button class="ml-2 btn btn-success btn-sm" type="submit">Submit</button>
-                                    </form>
-                                    <form action="{{ route('search-product') }}" method="GET" class="form-inline my-2 my-lg-0 justify-content-end">
-                                        @csrf
-                                        <input class="form-control mr-sm-2" type="search" placeholder="Masukkan Nama Produk..." aria-label="Search" name="search" size="30">
-                                        <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-                                    </form>
+                                <div class="col-9">
+                                    <div class="d-flex justify-content-between">
+                                        <form action="{{ route('sorting-products') }}" method="post" class="form-inline">
+                                            @csrf
+                                            <div class="form-group">
+                                                <select name="sortby" class="form-control">
+                                                    <option value="">Urutkan</option>
+                                                    <option value="terendah">Harga Terendah</option>
+                                                    <option value="tertinggi">Harga Tertinggi</option>
+                                                </select>
+                                            </div>
+                                            <button class="ml-2 btn btn-success btn-sm" type="submit">Submit</button>
+                                        </form>
+                                        <form action="{{ route('search-product') }}" method="GET" class="form-inline justify-content-end">
+                                            @csrf
+                                            <input class="form-control mr-sm-2" type="search" placeholder="Cari produk..." aria-label="Search" name="search" size="20">
+                                            <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">

@@ -83,7 +83,7 @@ class TransactionController extends Controller
      */
     public function show($id)
     {
-        $detailTransaction = Transaction::with('produk')->findOrFail($id);
+        $detailTransaction = Transaction::with('produk', 'customer')->findOrFail($id);
         return view('pages.transactions.detail', compact('detailTransaction'));
     }
 

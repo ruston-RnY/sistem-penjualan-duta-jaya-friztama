@@ -16,13 +16,13 @@
                         <div class="card mt-3">
                             <div class="card-header">
                                 <div class="row">
-                                    <div class="col-5">
+                                    <div class="col-md-3">
                                         <a href="{{ route('suppliers.create') }}" class="btn btn-primary btn-sm">
                                             Tambah
                                         </a>
                                         <a href="{{ route('print-suppliers') }}" target="_blank" class="btn btn-info btn-sm ml-2"><i class="fa fa-print"></i> Print</a>
                                     </div>
-                                    <div class="col-7 d-flex justify-content-between">
+                                    <div class="col-md-9 d-flex justify-content-between">
                                         <form action="{{ route('sorting-suppliers') }}" method="post" class="form-inline my-2 my-lg-0">
                                             @csrf
                                             <div class="form-group">

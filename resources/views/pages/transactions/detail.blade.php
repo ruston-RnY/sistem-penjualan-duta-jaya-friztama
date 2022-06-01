@@ -19,7 +19,7 @@
                                     </tr>
                                     <tr>
                                         <td>Nama Pembeli</td>
-                                        <td>{{ $detailTransaction->nama_pembeli }}</td>
+                                        <td>{{ $detailTransaction->customer->nama }}</td>
                                     </tr>
                                     <tr>
                                         <td>Alamat</td>

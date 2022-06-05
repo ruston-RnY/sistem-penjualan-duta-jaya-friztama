@@ -22,8 +22,8 @@
                                         </a>
                                         <a href="{{ route('print-suppliers') }}" target="_blank" class="btn btn-info btn-sm ml-2"><i class="fa fa-print"></i> Print</a>
                                     </div>
-                                    <div class="col-md-9 d-flex justify-content-between">
-                                        <form action="{{ route('sorting-suppliers') }}" method="post" class="form-inline my-2 my-lg-0">
+                                    <div class="col-md-9 d-flex justify-content-end">
+                                        <form action="{{ route('sorting-suppliers') }}" method="post" class="form-inline my-2 my-lg-0 mr-4">
                                             @csrf
                                             <div class="form-group">
                                                 <select name="sortby" class="form-control">
@@ -36,7 +36,7 @@
                                         </form>
                                         <form action="{{ route('search-supplier') }}" method="GET" class="form-inline my-2 my-lg-0 justify-content-end">
                                             @csrf
-                                            <input class="form-control mr-sm-2" type="search" placeholder="Masukkan Nama Produk..." aria-label="Search" name="search" size="30">
+                                            <input class="form-control mr-sm-2" type="search" placeholder="Cari supplier..." aria-label="Search" name="search" size="12">
                                             <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
                                         </form>
                                     </div>

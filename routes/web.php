@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function(){
     
     Route::resource('transactions', '\App\Http\Controllers\TransactionController');
     Route::get('/print-transactions', [TransactionController::class,'print'])->name('print-transactions');
+    Route::get('/print-transactions/{id}', [TransactionController::class,'printDetail'])->name('print-detail-transactions');
     
     Route::resource('laporan', '\App\Http\Controllers\LaporanController');
     Route::resource('users', '\App\Http\Controllers\UserController');

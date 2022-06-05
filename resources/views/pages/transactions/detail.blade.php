@@ -61,6 +61,7 @@
                                 </table>
                                 <div class="trigger">
                                     <a href="{{ route('transactions.index') }}" class="btn btn-sm btn-primary">Back</a>
+                                    <a href="{{ route('print-detail-transactions', $detailTransaction->id) }}" target="_blank" class="btn btn-info btn-sm ml-2"><i class="fa fa-print"></i> Print</a>
                                 </div>
                             </div>
                         </div>

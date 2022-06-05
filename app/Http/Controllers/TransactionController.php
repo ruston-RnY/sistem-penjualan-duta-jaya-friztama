@@ -152,4 +152,10 @@ class TransactionController extends Controller
         $transactions = Transaction::orderBy('id', 'desc')->get();
         return view('pages.transactions.laporan', compact('transactions'));
     }
+
+    public function printDetail($id)
+    {
+        $detailTransaction = Transaction::with('produk', 'customer')->findOrFail($id);
+        return view('pages.transactions.print_detail_transaction', compact('detailTransaction'));
+    }
 }

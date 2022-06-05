@@ -22,8 +22,8 @@
                                     <a href="{{ route('print-products') }}" target="_blank" class="btn btn-info btn-sm ml-2"><i class="fa fa-print"></i> Print</a>
                                 </div>
                                 <div class="col-9">
-                                    <div class="d-flex justify-content-between">
-                                        <form action="{{ route('sorting-products') }}" method="post" class="form-inline">
+                                    <div class="d-flex justify-content-end">
+                                        <form action="{{ route('sorting-products') }}" method="post" class="form-inline mr-4">
                                             @csrf
                                             <div class="form-group">
                                                 <select name="sortby" class="form-control">
@@ -36,7 +36,7 @@
                                         </form>
                                         <form action="{{ route('search-product') }}" method="GET" class="form-inline justify-content-end">
                                             @csrf
-                                            <input class="form-control mr-sm-2" type="search" placeholder="Cari produk..." aria-label="Search" name="search" size="20">
+                                            <input class="form-control mr-sm-2" type="search" placeholder="Cari produk..." aria-label="Search" name="search" size="12">
                                             <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
                                         </form>
                                     </div>
